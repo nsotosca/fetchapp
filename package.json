@@ -26,10 +26,8 @@
   },
   "lint-staged": {
     "**/*.+(ts|tsx|js|jsx)": [
-      "eslint --fix"
-    ],
-    "test":"npm run test --coverage",
-    "add":"git add ."
+      "eslint --fix","test"
+    ]
   },
   "eslintConfig": {
     "extends": [
