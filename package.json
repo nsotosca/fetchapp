@@ -26,7 +26,7 @@
   },
   "lint-staged": {
     "**/*.+(ts|tsx|js|jsx)": [
-      "eslint --fix","test"
+      "eslint --fix","npm run test"
     ]
   },
   "eslintConfig": {
