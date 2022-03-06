@@ -1,5 +1,7 @@
 import React from 'react';
 
-const App: React.FC = (): JSX.Element => <h1 className='pepe'>Hola Mundo!</h1>;
+import Home from './containers/Home/Home';
+
+const App :React.FC = () :JSX.Element => <Home />;
 
 export default App;

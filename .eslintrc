@@ -21,8 +21,14 @@
   ],
   "rules": {
     // Enable additional rules
-    "indent": ["error", 2],
-    "linebreak-style": ["error", "unix"],
+    "indent": ["error", 2, { 
+      "ignoredNodes": ["ConditionalExpression"], 
+      "SwitchCase": 1, 
+      "VariableDeclarator": { "var": 2, "let": 2, "const": 3 },
+      "MemberExpression": 1,
+      "offsetTernaryExpressions": true 
+    }],
+    "linebreak-style": 0,
     "quotes": ["error", "single"],
     "semi": [2, "always"],
     "capitalized-comments": [
@@ -33,7 +39,35 @@
         "ignoreInlineComments": true
       }
     ],
+    "comma-dangle": ["error", {
+      "arrays": "never",
+      "objects": "never",
+      "imports": "never",
+      "exports": "never",
+      "functions": "never"
+    }],
+    "key-spacing": [2, {
+      "singleLine": {
+          "beforeColon": true,
+          "afterColon": true
+      },
+      "multiLine": {
+          "beforeColon": true,
+          "afterColon": true,
+          "align": "colon"
+      }
+    }],
+    "no-trailing-spaces": ["error", { "ignoreComments": true }],
+    "no-irregular-whitespace": ["error", { "skipComments": true, "skipRegExps": true, "skipTemplates": true}],
     "comma-spacing": ["error", { "before": false, "after": true }],
-    "no-trailing-spaces": ["error", { "ignoreComments": true }]
+    "object-curly-spacing": ["error", "always",{ "arraysInObjects": true, "objectsInObjects": true }],
+    "array-bracket-spacing": ["error", "always",{ "arraysInArrays": true, "objectsInArrays": true, "singleValue": false }],
+    "block-spacing": ["error", "always"],
+    "space-in-parens": ["error", "always"],
+    "space-infix-ops": ["error", { "int32Hint": false }],
+    "no-duplicate-imports": ["error", { "includeExports": true }],
+
+    "@typescript-eslint/indent": ["error", 2],
+    "@typescript-eslint/no-unused-vars": "error"
   }
 }
