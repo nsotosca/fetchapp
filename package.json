@@ -34,7 +34,7 @@
   "lint-staged": {
     "**/*.+(ts|tsx|js|jsx)": [
       "npm run lint",
-      "npm run test -- --watchAll=false"
+      "npm run test -- --watchAll=false --passWithNoTests"
     ]
   },
   "eslintConfig": {
