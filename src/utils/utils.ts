@@ -10,6 +10,6 @@ export const getEspecificObjectKeys = ( arr:ObjectKeys[], properties:string[] ) 
   } );
 };
 
-export const getNumberOfPages = ( total:number, maxPerPage:number ) => {
+export const getTotalPages = ( total:number, maxPerPage:number ) => {
   return Math.ceil( Number( total ) / Number( maxPerPage ) );
 };

@@ -1,13 +1,21 @@
 import React from 'react';
 import './i18n';
 
-import Home from './containers/Home/Home';
-import Container from './components/Container/Container';
+import Characters from './containers/Characters';
+import { Container, Footer, Header } from './components';
+
+import './App.scss';
 
 const App :React.FC = () :JSX.Element =>{
   return(
-    <Container>
-      <Home />
+    <Container classes='app-container' >
+      <>
+        <Header />
+        <Container isInnerCointainer classes='app-main-container'>
+          <Characters />
+        </Container>
+        <Footer />
+      </>
     </Container>
   );
 };

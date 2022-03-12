@@ -1,18 +1,20 @@
 import React from 'react';
 
-import { Box, Pagination } from '@mui/material';
+import { Box, Pagination as MuiPagination } from '@mui/material';
 
 type PostPaginationProps = {
   pageCount: number;
+  page: number;
   setPage: ( page:number ) => void;
 }
 
-const PostPagination = ( props:PostPaginationProps ):JSX.Element => {
-  const { pageCount, setPage  } = props;
+const Pagination = ( props: PostPaginationProps ): JSX.Element => {
+  const { pageCount, page, setPage  } = props;
 
   return (
     <Box display='flex' justifyContent='center' margin={2}>
-      <Pagination
+      <MuiPagination
+        page={page}
         variant='outlined'
         size='medium'
         count={pageCount}
@@ -22,4 +24,4 @@ const PostPagination = ( props:PostPaginationProps ):JSX.Element => {
   );
 };
 
-export default PostPagination;
+export default Pagination;

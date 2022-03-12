@@ -1,0 +1,13 @@
+@import './assets/styles/variables', './assets/styles/mixins';
+
+.app {
+  &-container {
+    @include flex(column);
+    min-height: 100vh;
+    background-color: $bgDark;
+  }
+
+  &-main-container {
+    flex: 1;
+  }
+}

@@ -1,22 +1,24 @@
 import React from 'react';
-import { ObjectKeys } from '../../utils/utils';
-import PostItem from '../PostItem';
-import LayoutContainer from '../LayoutContainer';
+
 import Card from '../Card';
+import Grid from '../Grid';
+import PostItem from '../PostItem';
+
+import { ObjectKeys } from '../../utils/utils';
 
 type PostListProps = {
   posts: ObjectKeys[]
 }
 
-const PostList = ( props: PostListProps ) :JSX.Element => {
-  const { posts } = props;
+const PostList = ( { posts }: PostListProps ): JSX.Element => {
+
   return (
-    <LayoutContainer>
+    <Grid>
       <>
         {
           posts?.length &&
           posts.map( ( post, index ) =>{
-            return ( <LayoutContainer isItem={true} key={index}>
+            return ( <Grid isItem={true} key={index}>
               <Card key={index} title={post?.name as string} >
                 <>
                   {Object.keys( post ).map( ( key, index ) =>
@@ -24,11 +26,11 @@ const PostList = ( props: PostListProps ) :JSX.Element => {
                   )}
                 </>
               </Card>
-            </LayoutContainer> );  } )
+            </Grid> );  } )
 
         }
       </>
-    </LayoutContainer>
+    </Grid>
   );
 };
 
