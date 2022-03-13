@@ -10,7 +10,8 @@ const resources = {
       'name'       : 'Nombre',
       'birth_year' : 'Fecha de nacimiento',
       'gender'     : 'Genero',
-      'homeworld'  : 'Mundo de origen'
+      'homeworld'  : 'Mundo de origen',
+      'characters' : 'Personajes'
     }
   }
 };

@@ -8,7 +8,7 @@ import Logo from '../../assets/images/chewbacca_icon.svg';
 const Header = (): JSX.Element => {
   return (
     <div className='header'>
-      <p className='header-title'>Star Wars</p>
+      <h1 className='header-title'>Star Wars</h1>
       <span><Icon image={Logo} classes='header-icon'/></span>
     </div>
   );

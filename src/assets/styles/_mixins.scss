@@ -1,5 +1,48 @@
-@mixin flex($direction) {
+@import './variables';
+
+@mixin flex($direction: row) {
   display: flex !important;
   flex-direction: $direction;
 }
+
+@mixin flexAlign($vertical: flex-start, $horizontal: flex-start) {
+  align-items: $vertical;
+  justify-content: $horizontal;
+}
+
+@mixin setProp ($prop, $value) {
+  @if $value != null{
+    #{$prop}: $value;
+  }
+}
+
+@mixin font($size: 1em, $family: $textLight, $align: left, $color: $black) {
+  @include setProp(font-size, $size);
+  @include setProp(font-family, $family);
+  @include setProp(text-align, $align);
+  @include setProp(color, $color);
+}
+
+@mixin rotate {
+  animation: loading 2s linear infinite;
+  @keyframes loading {
+    0% { 
+      transform: rotate(0); 
+    }
+    30% { 
+      transform: rotate(360deg);
+    }
+  }
+}
   
+%resetMargins {
+  margin: 0;
+  padding: 0;
+}
+
+%resetUl {
+  margin:0;
+  padding: 0;
+  text-indent: 0;
+  list-style: none;
+}

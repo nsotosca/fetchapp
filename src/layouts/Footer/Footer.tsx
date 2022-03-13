@@ -4,7 +4,10 @@ import './Footer.scss';
 
 const Footer = (): JSX.Element => {
   return (
-    <div className='footer-container'>Footer</div>
+    <div className='footer-container'>
+      <hr className='footer-divider' />
+      <p className='footer-copyright'>@ Copy Left 2022</p>
+    </div>
   );
 };
 

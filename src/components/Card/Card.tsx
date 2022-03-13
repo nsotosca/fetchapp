@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { useTranslation } from 'react-i18next';
-
 import { Card as MuiCard } from '@mui/material';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 
+import { Text as Title } from '../../components';
+
+import './Card.scss';
 
 type CardProps = {
   title?: string;
@@ -21,10 +21,9 @@ type CardProps = {
 
 const Card = ( props:CardProps ):JSX.Element => {
   const { children, hasImg, imgUrl, altImg, title, leftAction } = props;
-  const { t } = useTranslation();
 
   return (
-    <MuiCard>
+    <MuiCard className='card'>
       {hasImg &&
         ( <CardMedia
           component="img"
@@ -35,9 +34,9 @@ const Card = ( props:CardProps ):JSX.Element => {
       }
       <CardContent>
         {title &&
-          ( <Typography gutterBottom variant="h5" component="div">
-            {t( title )}
-          </Typography> )
+          ( <Title headingLevel='h3' classes='card-title'>
+            {title}
+          </Title> )
         }
         {children}
       </CardContent>

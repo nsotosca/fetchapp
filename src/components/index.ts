@@ -7,5 +7,15 @@ import Loader from './Loader';
 import PostItem from './PostItem';
 import PostList from './PostList';
 import Pagination from './Pagination';
+import Text from './Text';
 
-export  { Card, Container, Footer, Grid, Header, Loader, PostItem, PostList, Pagination };
+export  {
+  Card,
+  Container,
+  Footer, Grid,
+  Header, Loader,
+  PostItem,
+  PostList,
+  Pagination,
+  Text
+};

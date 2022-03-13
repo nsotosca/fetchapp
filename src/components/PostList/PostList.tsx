@@ -6,6 +6,8 @@ import PostItem from '../PostItem';
 
 import { ObjectKeys } from '../../utils/utils';
 
+import './PostList.scss';
+
 type PostListProps = {
   posts: ObjectKeys[]
 }
@@ -17,17 +19,20 @@ const PostList = ( { posts }: PostListProps ): JSX.Element => {
       <>
         {
           posts?.length &&
-          posts.map( ( post, index ) =>{
-            return ( <Grid isItem={true} key={index}>
-              <Card key={index} title={post?.name as string} >
-                <>
-                  {Object.keys( post ).map( ( key, index ) =>
-                    <PostItem  key={index} postKey={key} value={post[key]}/>
-                  )}
-                </>
-              </Card>
-            </Grid> );  } )
-
+          posts.map( ( post, index ) => {
+            return (
+              <Grid isItem={true} key={index}>
+                <Card key={index} title={post?.name as string}>
+                  <ul className='post-list-item'>
+                    {Object.keys( post ).map( ( key, index ) =>
+                      <li key={index}>
+                        <PostItem postKey={key} value={post[key]} classes='post-list-tag'/>
+                      </li>
+                    )}
+                  </ul>
+                </Card>
+              </Grid> );
+          } )
         }
       </>
     </Grid>

@@ -1,6 +1,21 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+
 .footer {
   &-container {
+    @include flex(column);
+    @include flexAlign(center,center);
     height: 5em;
     padding: 2em 1em;
+  }
+
+  &-divider {
+    width: 80%;
+    border: solid;
+    color: $dark;
+  }
+
+  &-copyright {
+    @include font(0.8em, null, null, $light);
   }
 }

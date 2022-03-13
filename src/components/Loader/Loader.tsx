@@ -1,13 +1,15 @@
 import React from 'react';
 
-import CircularProgress from '@mui/material/CircularProgress';
-import Box from '@mui/material/Box';
+import Icon from '../../components/Icon';
+import Logo from '../../assets/images/chewbacca_icon.svg';
+
+import './Loader.scss';
 
 const Loader = ():JSX.Element => {
   return (
-    <Box sx={{ display : 'flex', alignItems : 'center', justifyContent : 'center', height : '100vh' }}>
-      <CircularProgress />
-    </Box>
+    <div className='loader'>
+      <Icon image={Logo} classes='loader-icon'/>
+    </div>
   );
 };
 

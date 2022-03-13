@@ -1,3 +1,8 @@
-.characters-container {
-    padding: 3em 1em;
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+
+.characters {
+  &-title {
+    @include font(3em, $primary-title, center, $primary-color);
+  }
 }

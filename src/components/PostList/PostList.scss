@@ -1,0 +1,14 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+
+.post-list {
+    &-item {
+        @extend %resetUl;
+        @include font(0.9em, $textLight, null, $light);
+        margin-top: 20px
+    }
+
+    &-tag {
+        font-family: $secondary-title;
+    }
+}
