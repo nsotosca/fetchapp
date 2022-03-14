@@ -5,4 +5,13 @@
   &-title {
     @include font(3em, $primary-title, center, $primary-color);
   }
+
+  &-pagination-item.MuiPaginationItem-page{
+    color: $light;
+
+    &.Mui-selected {
+      background-color: $primary-color;
+      color: $dark;
+    }
+  }
 }

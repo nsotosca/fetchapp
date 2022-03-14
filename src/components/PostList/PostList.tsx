@@ -25,9 +25,8 @@ const PostList = ( { posts }: PostListProps ): JSX.Element => {
                 <Card key={index} title={post?.name as string}>
                   <ul className='post-list-item'>
                     {Object.keys( post ).map( ( key, index ) =>
-                      <li key={index}>
-                        <PostItem postKey={key} value={post[key]} classes='post-list-tag'/>
-                      </li>
+
+                      <PostItem  key={index} postKey={key} value={post[key]} classes='post-list-tag'/>
                     )}
                   </ul>
                 </Card>

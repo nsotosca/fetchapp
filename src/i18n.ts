@@ -7,11 +7,15 @@ import { initReactI18next } from 'react-i18next';
 const resources = {
   es : {
     translation : {
-      'name'       : 'Nombre',
-      'birth_year' : 'Fecha de nacimiento',
-      'gender'     : 'Genero',
-      'homeworld'  : 'Mundo de origen',
-      'characters' : 'Personajes'
+      'name'             : 'Nombre',
+      'birth_year'       : 'Fecha de nacimiento',
+      'gender'           : 'Genero',
+      'homeworld'        : 'Planeta',
+      'characters.title' : 'Personajes',
+      'male'             : 'M',
+      'female'           : 'F',
+      'none'             : 'N/S',
+      'unknown'          : 'Desconocido'
     }
   }
 };

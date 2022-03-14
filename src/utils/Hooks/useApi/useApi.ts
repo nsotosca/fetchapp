@@ -4,30 +4,39 @@ import { getData } from '../../../core/api';
 import { getEspecificObjectKeys, getTotalPages, ObjectKeys } from '../../utils';
 
 type ApiReturn = {
-  data: ObjectKeys[];
+  data:  ObjectKeys[];
   pageCount: number;
   page: number;
   setPage: React.Dispatch<React.SetStateAction<number>>;
   loading: boolean;
 }
 
-const useApi = (  api: string, properties: string[] ): ApiReturn => {
+const useApi = ( api: string, properties: string[], hasPages: boolean ): ApiReturn => {
   const [ data, setData ] = useState<ObjectKeys[]>( [] );
   const [ pageCount, setPageCount ] = useState( 0 );
   const [ page, setPage ] = useState( 1 );
   const [ loading, setLoading ] = useState( false );
 
   const fetchData = useCallback( () => {
-    getData( `${api}?page=${page}` )
-      .then( res => {
-        if( !pageCount ){
-          const numberOfPages = getTotalPages( res.count, res.results.length );
-          setPageCount( numberOfPages );
-        }
-        const newArrayResults = getEspecificObjectKeys( res.results, properties );
-        setData( newArrayResults );
-      } )
-      .finally( () => setLoading( false ) );
+    if( api )
+      if( hasPages ){
+        getData( `${api}?page=${page}` )
+          .then( res => {
+            if( !pageCount ){
+              const numberOfPages = getTotalPages( res.count, res.results.length );
+              setPageCount( numberOfPages );
+            }
+            const newArrayResults = getEspecificObjectKeys( res.results, properties );
+            setData( newArrayResults );
+          } )
+          .finally( () => setLoading( false ) );
+      } else {
+        getData( `${api}` )
+          .then( res => {
+            setData( [res] );
+          } )
+          .finally( () => setLoading( false ) );
+      }
   }, [page] );
 
   useEffect( () =>{

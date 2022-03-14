@@ -1,4 +1,4 @@
-export type ObjectKeys = Record<string, string | number | boolean>;
+export type ObjectKeys = Record<string, string | string[]>;
 
 export const getEspecificObjectKeys = ( arr:ObjectKeys[], properties:string[] ) => {
   return arr.map( ( obj:ObjectKeys ) => {

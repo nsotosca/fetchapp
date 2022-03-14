@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Icon from '../../components/Icon';
-import Logo from '../../assets/images/chewbacca_icon.svg';
+import Logo from '../../assets/images/darth-vader_icon.svg';
 
 import './Loader.scss';
 
