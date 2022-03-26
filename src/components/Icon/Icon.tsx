@@ -3,12 +3,12 @@ import React from 'react';
 type IconProps = {
   classes?:string;
   image: string;
-  description?: string;
+  alt?: string;
 }
 
-const Icon = ( { classes, image, description }: IconProps ): JSX.Element => {
+const Icon = ( { classes, image, alt }: IconProps ): JSX.Element => {
   return (
-    <img src={image} className={classes ? classes : ''} alt={description ? description : ''} />
+    <img src={image} className={classes ? classes : ''} alt={alt ? alt : ''} />
   );
 };
 

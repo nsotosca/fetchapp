@@ -1,0 +1,13 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+
+.home {
+  @include flex(column);
+  @include flexAlign(center, center);
+
+  &-logo{
+    margin: 3rem;
+    height: auto;
+    width: 300px;
+  }
+}

@@ -1,10 +1,10 @@
-@import '../../assets/styles/mixins';
-@import '../../assets/styles/variables';
+@import '../../../../assets/styles/mixins';
+@import '../../../../assets/styles/variables';
 
 .footer {
   &-container {
     @include flex(column);
-    @include flexAlign(center,center);
+    @include flexAlign(center, center);
     height: 5em;
     padding: 2em 1em;
   }

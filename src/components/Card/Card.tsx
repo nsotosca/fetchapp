@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Card as MuiCard } from '@mui/material';
+import { Card as MuiCard, CardActionArea } from '@mui/material';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -15,34 +15,38 @@ type CardProps = {
   hasImg?: boolean;
   imgUrl?: string;
   altImg?: string;
-  leftAction?: () => void;
-  children: JSX.Element;
+  cardAction?:() => void;
+  actionButton?:() => void;
+  actionButtonLabel?: string;
+  children?: JSX.Element;
 }
 
 const Card = ( props:CardProps ):JSX.Element => {
-  const { children, hasImg, imgUrl, altImg, title, leftAction } = props;
+  const { children, hasImg, imgUrl, altImg, title, actionButton, actionButtonLabel, cardAction } = props;
 
   return (
     <MuiCard className='card'>
-      {hasImg &&
+      <CardActionArea onClick={() =>cardAction ? cardAction() : {}} disabled={!cardAction}>
+        {hasImg &&
         ( <CardMedia
           component="img"
           height="140"
           image={imgUrl}
           alt={altImg}
         /> )
-      }
-      <CardContent>
-        {title &&
+        }
+        <CardContent>
+          {title &&
           ( <Title headingLevel='h3' classes='card-title'>
             {title}
           </Title> )
-        }
-        {children}
-      </CardContent>
-      {leftAction &&
+          }
+          {children}
+        </CardContent>
+      </CardActionArea>
+      {actionButton && actionButtonLabel &&
       <CardActions>
-        <Button size="small" onClick={() => leftAction}> Share</Button>
+        <Button size="small" onClick={() => actionButton()}> {actionButtonLabel}</Button>
       </CardActions>
       }
     </MuiCard>

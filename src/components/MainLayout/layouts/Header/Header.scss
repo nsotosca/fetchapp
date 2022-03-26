@@ -1,0 +1,51 @@
+@import '../../../../assets/styles/mixins';
+@import '../../../../assets/styles/variables';
+
+.header {
+  @include flex(row);
+  @include flexAlign(center, center);
+  width: 100%;
+  height: 5em;
+  background-color: $dark;
+  padding: 1em 2em;
+  z-index: 1;
+
+  &-link-home {
+    display: flex;
+    text-decoration: none;
+  }
+
+  &-title {
+    @include font(2em, $primary-title, null, $primary-color);
+    @extend %resetMargins;
+  }
+
+  &-icon {
+    height: 3rem;
+    padding: 0 10px;
+  }
+
+  &-nav {
+    @include flex(row);
+    @include flexAlign(center, center);
+    position: absolute;
+    z-index: 2;
+    top: 65px;
+    left: 0;
+    width: 100%;
+
+    &-icon {
+      height: 2.5rem;
+      width: 2.5rem;
+      margin: 0 5px;
+      padding: 0 10px;
+      border: 1px solid $primary-color;
+      border-radius: 100%;
+      background-color: $dark;
+
+      &:hover {
+        background-color: $primary-color;
+      }
+    }
+  }
+}

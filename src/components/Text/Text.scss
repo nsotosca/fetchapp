@@ -1,0 +1,12 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+
+.text {
+  &-h2 {
+    @include title();
+  }
+
+  &-p {
+    @include text();
+  }
+}

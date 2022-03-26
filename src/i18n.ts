@@ -7,15 +7,32 @@ import { initReactI18next } from 'react-i18next';
 const resources = {
   es : {
     translation : {
-      'name'             : 'Nombre',
-      'birth_year'       : 'Fecha de nacimiento',
-      'gender'           : 'Genero',
-      'homeworld'        : 'Planeta',
+      'homeworld' : 'Planeta',
+      'male'      : 'M',
+      'female'    : 'F',
+      'none'      : 'N/S',
+      'unknown'   : 'Desconocido',
+
+      'name'       : 'Nombre',
+      'birth_year' : 'Fecha de nacimiento',
+      'gender'     : 'Genero',
+      'height'     : 'Altura',
+      'mass'       : 'Peso',
+      'hair_color' : 'Color de pelo',
+      'skin_color' : 'Color de piel',
+      'eye_color'  : 'Color de ojos',
+
+      'rotation_period' : 'Periodo de rotacion',
+      'orbital_period'  : 'Periodo orbital',
+      'diameter'        : 'Diametro',
+      'climate'         : 'Clima',
+      'gravity'         : 'Gravedad',
+      'terrain'         : 'Terreno',
+      'surface_water'   : 'Superfice de agua',
+      'population'      : 'Poblacion',
+
       'characters.title' : 'Personajes',
-      'male'             : 'M',
-      'female'           : 'F',
-      'none'             : 'N/S',
-      'unknown'          : 'Desconocido'
+      'planets.title'    : 'Planetas'
     }
   }
 };
