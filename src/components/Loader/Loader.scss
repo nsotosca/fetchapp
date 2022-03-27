@@ -2,14 +2,14 @@
 @import '../../assets/styles/variables';
 
 .loader {
-    @include flex(row);
-    @include flexAlign(center,center);  
-    height: calc(100vh - 25.5em);
-  
-    &-icon {
-      @include rotate;
-      height: 5rem;
-      padding: 0 10px;
-      opacity: 0.5;
-    }
+  @include flex(row);
+  @include flexAlign(center, center);
+  flex: 1;
+
+  &-icon {
+    @include rotate;
+    height: 5rem;
+    padding: 0 10px;
+    opacity: 0.5;
   }
+}

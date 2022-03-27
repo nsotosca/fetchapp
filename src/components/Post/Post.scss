@@ -1,12 +1,12 @@
 @import '../../assets/styles/mixins';
 @import '../../assets/styles/variables';
 
-.characters {
+.post {
   &-title {
     @include font(3em, $primary-title, center, $primary-color);
   }
 
-  &-pagination-item.MuiPaginationItem-page{
+  &-pagination-item.MuiPaginationItem-page {
     color: $light;
 
     &.Mui-selected {

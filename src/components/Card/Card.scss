@@ -2,16 +2,15 @@
 @import '../../assets/styles/variables';
 
 .card {
-  &.MuiPaper-root{
+  &.MuiPaper-root {
     background-color: $dark;
   }
 
   &-title {
     @include flex();
-    @include flexAlign(center,center);
+    @include flexAlign(center, center);
     @include font(1.2em, $primary-title, center, $light);
     @extend %resetMargins;
-    background-color: $bgDark;
     border-radius: 4px;
     height: 55px;
     font-weight: 100;

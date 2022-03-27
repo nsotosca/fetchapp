@@ -1,14 +1,15 @@
 @import '../../assets/styles/mixins';
 @import '../../assets/styles/variables';
 
-.post-list {
-  &-item {
+.post-list-item {
     @extend %resetUl;
-    @include font(0.9em, $textLight, null, $light);
     margin-top: 20px;
-  }
 
-  &-tag {
+  &-li {
+    @include font(1.5rem, $textLight, center, $light);
+  }
+  
+  &-key {
     font-family: $secondary-title;
   }
 }

@@ -1,0 +1,13 @@
+@import '../../assets/styles/mixins';
+@import '../../assets/styles/variables';
+
+.posts {
+  &-pagination-item.MuiPaginationItem-page {
+    color: $light;
+
+    &.Mui-selected {
+      background-color: $primary-color;
+      color: $dark;
+    }
+  }
+}

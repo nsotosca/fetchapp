@@ -36,6 +36,21 @@
     }
   }
 }
+
+@mixin title {
+  font-size: 3em;
+  font-family: $primary-title;
+  text-align: center;
+  color: $primary-color;
+  line-height: 3rem;
+}
+
+@mixin text {
+  font-size: 1em;
+  font-family: $textLight;
+  text-align: left;
+  color: $light;
+}
   
 %resetMargins {
   margin: 0;
