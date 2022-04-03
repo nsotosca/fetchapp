@@ -2,8 +2,15 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import Text, { TextProps } from './Text';
 
+jest.mock( 'react-i18next', () => ( {
+  useTranslation : () => ( { t : ( key: string ) => key } )
+} ) );
+
 const getRender = ( props: TextProps ) => {
-  return render( <Text {...props}/> );
+  return render(
+    <Text headingLevel={props.headingLevel} classes={props.classes}>
+      {props.children}
+    </Text> );
 };
 
 describe( 'Text', () => {
