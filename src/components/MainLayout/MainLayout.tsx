@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { Header, Container, Footer } from './layouts';
+import { Container } from '@mui/material';
+
+import { Header, Footer } from './layouts';
 
 import './MainLayout.scss';
 
@@ -10,14 +12,12 @@ type MainLayoutProps = {
 
 const MainLayout = ( { children } : MainLayoutProps ): JSX.Element => {
   return (
-    <Container classes='app-container' >
-      <>
-        <Header />
-        <Container isInnerCointainer classes='app-container-inner'>
-          {children}
-        </Container>
-        <Footer />
-      </>
+    <Container disableGutters maxWidth={false} className='main-layout-container'>
+      <Header />
+      <Container disableGutters={false} maxWidth='lg' className='main-layout-container-inner'>
+        {children}
+      </Container>
+      <Footer />
     </Container>
   );
 };

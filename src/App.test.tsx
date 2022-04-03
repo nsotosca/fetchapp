@@ -1,9 +1,8 @@
 import React from 'react';
-import { render } from '@testing-library/react';
 import App from './App';
+import '@testing-library/jest-dom';
+import { renderWithRouter } from './utils/test-utils';
 
-test( 'renders learn react link', () => {
-  render( <App /> );
-  expect( true ).toBe( true );
-  expect( true ).toBe( true );
+test( 'App render success', () => {
+  renderWithRouter( <App /> );
 } );

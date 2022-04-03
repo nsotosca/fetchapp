@@ -1,6 +1,5 @@
 import React from 'react';
 
-import Icon from '../../components/Icon';
 import Logo from '../../assets/images/darth-vader_icon.svg';
 
 import './Loader.scss';
@@ -8,7 +7,7 @@ import './Loader.scss';
 const Loader = ():JSX.Element => {
   return (
     <div className='loader'>
-      <Icon image={Logo} classes='loader-icon'/>
+      <img src={Logo} className='loader-img' alt='loader'/>
     </div>
   );
 };

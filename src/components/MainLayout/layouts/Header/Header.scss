@@ -5,9 +5,9 @@
   @include flex(row);
   @include flexAlign(center, center);
   width: 100%;
-  height: 5em;
+  height: 3.5rem;
   background-color: $dark;
-  padding: 1em 2em;
+  padding: 0.5rem 0;
   z-index: 1;
 
   &-link-home {
@@ -30,15 +30,15 @@
     @include flexAlign(center, center);
     position: absolute;
     z-index: 2;
-    top: 65px;
+    top: 55px;
     left: 0;
     width: 100%;
 
     &-icon {
-      height: 2.5rem;
-      width: 2.5rem;
+      height: 1.2rem;
+      width: 1.2rem;
       margin: 0 5px;
-      padding: 0 10px;
+      padding: 7px;
       border: 1px solid $primary-color;
       border-radius: 100%;
       background-color: $dark;

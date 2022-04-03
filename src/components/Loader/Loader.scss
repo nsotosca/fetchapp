@@ -2,11 +2,12 @@
 @import '../../assets/styles/variables';
 
 .loader {
-  @include flex(row);
-  @include flexAlign(center, center);
+  align-self: center;
+  display: flex;
   flex: 1;
 
-  &-icon {
+  &-img {
+    align-self: center;
     @include rotate;
     height: 5rem;
     padding: 0 10px;

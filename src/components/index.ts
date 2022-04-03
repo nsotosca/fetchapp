@@ -1,5 +1,4 @@
 import Card from './Card';
-import Container from './MainLayout/layouts/Container';
 import Footer from './MainLayout/layouts/Footer';
 import Grid from './Grid';
 import Header from './MainLayout/layouts/Header';
@@ -13,7 +12,6 @@ import Text from './Text';
 
 export  {
   Card,
-  Container,
   Footer, Grid,
   Header, Loader,
   PostList,

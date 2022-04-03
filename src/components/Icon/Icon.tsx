@@ -1,6 +1,6 @@
 import React from 'react';
 
-type IconProps = {
+export type IconProps = {
   classes?:string;
   image: string;
   alt?: string;
@@ -8,7 +8,7 @@ type IconProps = {
 
 const Icon = ( { classes, image, alt }: IconProps ): JSX.Element => {
   return (
-    <img src={image} className={classes ? classes : ''} alt={alt ? alt : ''} />
+    <img src={image} className={classes ? classes : ''} alt={alt ? alt : 'icon'} />
   );
 };
 

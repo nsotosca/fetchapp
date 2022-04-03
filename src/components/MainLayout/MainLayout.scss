@@ -1,9 +1,12 @@
 @import '../../assets/styles/mixins';
 @import '../../assets/styles/variables';
 
-.app-container {
+.main-layout-container {
+  min-height: 100vh;
+  background-color:  $bgDark;
+  @include flex(column);
   &-inner {
     @include flex(column);
-    flex: 1;
+    flex: 1 !important;
   }
 }
