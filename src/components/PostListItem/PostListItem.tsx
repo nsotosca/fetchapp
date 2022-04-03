@@ -12,23 +12,27 @@ type PostListItemProps = {
 const PostListItem = ( { post }: PostListItemProps ): JSX.Element => {
   const { t } = useTranslation();
 
-  const LiItem = (): JSX.Element => {
-    return <>
-      {Object.keys( post ).map( ( key, index ) =>{
-        return (
-          <li key={index} className='post-list-item-li'>
-            <span className='post-list-item-key'>{ t( key ) + ': '}</span>
-            { post[key] }
-          </li>
-        );
-      }
-      )}
-    </>;
+  const Item = (): JSX.Element => {
+    return (
+      <>
+        {Object.keys( post ).map(
+          ( key, index ) =>{
+            return (
+              <li key={index} className='post-list-item-li'>
+                <span className='post-list-item-key'>
+                  { t( key ) + ': '}
+                </span>
+                { post[key] }
+              </li>
+            );
+          }
+        )}
+      </> );
   };
 
   return (
     <ul className='post-list-item'>
-      <LiItem />
+      <Item />
     </ul>
   );
 };

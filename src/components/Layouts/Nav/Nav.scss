@@ -1,0 +1,27 @@
+@import '../../../assets/styles/mixins';
+@import '../../../assets/styles/variables';
+
+.nav {
+    @include flex(row);
+    @include flexAlign(center, center);
+    position: absolute;
+    z-index: 2;
+    top: 55px;
+    left: 0;
+    width: 100%;
+
+    &-icon {
+      height: 1.2rem;
+      width: 1.2rem;
+      margin: 0 5px;
+      padding: 7px;
+      border: 1px solid $primary-color;
+      border-radius: 100%;
+      background-color: $dark;
+
+      &:hover {
+        background-color: $primary-color;
+      }
+    }
+}
+

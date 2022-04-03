@@ -6,7 +6,7 @@ import './Text.scss';
 
 type HeadingLevels = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
-type TextProps = {
+export type TextProps = {
   children: string;
   /**
    * H1 | h2 | h3 | h4 | h5 | h6

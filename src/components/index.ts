@@ -1,7 +1,8 @@
 import Card from './Card';
-import Footer from './MainLayout/layouts/Footer';
+import { Header, Footer, Nav } from './Layouts';
 import Grid from './Grid';
-import Header from './MainLayout/layouts/Header';
+import MainLayout from './MainLayout';
+import Icon from './Icon';
 import Loader from './Loader';
 import PostList from './PostList';
 import PostListItem from './PostListItem';
@@ -12,8 +13,13 @@ import Text from './Text';
 
 export  {
   Card,
-  Footer, Grid,
-  Header, Loader,
+  Footer,
+  Grid,
+  Header,
+  Icon,
+  Loader,
+  MainLayout,
+  Nav,
   PostList,
   PostListItem,
   Posts,
